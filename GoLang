@@ -1,0 +1,12 @@
+Build execute 32bit on 64bit windows
+#######################
+The way I have achieved this (without any compiling of the compiler) on my Windows 7 64 bit PC was first having the windows amd64 installed, then download 32bit zip and unpack to a second folder:
+
+\go\go32
+\go\go64
+By then adjusting the PATH and the GOROOT inside my command prompt window as follows:
+
+set PATH=\go\go32;%PATH%
+set GOROOT=\go\go32\
+Then I went back and recompiled my app that was previously compiling using the 64 bit. All this can be setup in a batch if you want to switch between regularly.
+======================
